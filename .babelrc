@@ -1,0 +1,17 @@
+{
+  "plugins": [
+    "dynamic-import-node",
+    [
+      "module-resolver",
+      {
+        "root": ["./"],
+        "alias": {
+          "@lib": "./lib",
+          "@middlewares": "./middlewares",
+          "@models": "./models"
+        }
+      }
+    ]
+  ],
+  "presets": ["@babel/preset-env"]
+}

@@ -1,0 +1,130 @@
+{
+	"variables": [],
+	"info": {
+		"name": "CoinGecko-Wrapper",
+		"_postman_id": "7542a541-4e80-2adf-ac08-85dd6cfb6391",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register User",
+			"request": {
+				"url": "http://localhost:3000/api/user/register",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Vishal\",\n\t\"email\": \"vluthra25041@gmail.com\",\n\t\"password\": \"Test123\" \n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Login User",
+			"request": {
+				"url": "http://localhost:3000/api/user/login",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"vluthra25041@gmail.com\",\n\t\"password\": \"Test123\" \n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get User Profile",
+			"request": {
+				"url": "http://localhost:3000/api/user",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiVmlzaGFsIiwiZW1haWwiOiJ2bHV0aHJhMjUwNEBnbWFpbC5jb20iLCJpYXQiOjE2NjY0NTM4NjMsImV4cCI6MTY2NzMxNzg2M30.rsi881gmfF8rVGiA89Qx5Kng3HDZzRKERNukTJzEhHA",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "CoinGecko Api",
+			"request": {
+				"url": {
+					"raw": "http://localhost:3000/api/coinGecko/?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"coinGecko",
+						""
+					],
+					"query": [
+						{
+							"key": "vs_currency",
+							"value": "usd",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "order",
+							"value": "market_cap_desc",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "per_page",
+							"value": "100",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "page",
+							"value": "1",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "sparkline",
+							"value": "false",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiVmlzaGFsIiwiZW1haWwiOiJ2bHV0aHJhMjUwNEBnbWFpbC5jb20iLCJpYXQiOjE2NjY0NTk1OTcsImV4cCI6MTY2NzMyMzU5N30.-WHc2THOlSlgD3eS5SmbR9_BDPc6GNgPksKQpjGZmV4",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
